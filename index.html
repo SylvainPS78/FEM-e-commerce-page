@@ -14,31 +14,84 @@
   </head>
 
   <body>
+    <header>
+      <div class="left-header">
+        <img id="open-menu-button" src="./images/icon-menu.svg" alt="Button to open menu" width="16" height="15">
+        <img id="company-logo" src="./images/logo.svg" alt="Seakers company logo" width="138" height="20">
+      </div>
+      <div class="rigth-header">
+        <img id="cart-button" src="./images/icon-cart.svg" alt="Button to open cart" width="22" height="20">
+        <img id="user-avatar" src="./images/image-avatar.png" alt="avatar of user" width="20" height="20" >
+      </dvi>
+
+      <div id="customer-cart" hidden>
+        <p id="cart-title">Cart</p>
+        <p id="empty-cart">Your cart is empty.</p>
+
+        <div class="product-in-cart">
+          <img class="mini-icture" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail picture of product" width="176" width="176">
+          <p class="chosen-product"></p>
+          <p class="cart-price"></p>
+          <img id="delete-button" src="./images/icon-delete.svg" alt="Button to delete cart" width="14" height="16">
+          <button id="checkout-button">Checkout</button>
+        </div>
+
+      </div>
+    </header>
+
     <div id="overlay"></div>
-    Collections
-    Men
-    Women
-    About
-    Contact
 
-    Sneaker Company
+    <main>
+      <nav hidden>
+        <img id="close-menu-button" src="./images/icon-close.svg" alt="button to close menu" width="14" height="15">
+        <ul class="nav-menu">
+          <li class="menu-item">Collections</li>
+          <li class="menu-item">Men</li>
+          <li class="menu-item">Women</li>
+          <li class="menu-item">About</li>
+          <li class="menu-item">Contact</li>
+        </ul>
+      </nav>
 
-    Fall Limited Edition Sneakers
+      <section class="product-section">
 
-    These low-profile sneakers are your perfect casual wear companion. Featuring a 
-    durable rubber outer sole, they’ll withstand everything the weather can offer.
+        <div class="picture-wrapper">
+          <img id="previous-button" src="./images/icon-previous.svg" alt="Button for previous picture" width="13" height="18">
+          <img class="product-picture" src="./images/image-product-1.jpg" alt="Picture 1 of Fall Sneakers shoes" width="800" height="800">
+          <img id="next-button" src="./images/icon-next.svg" alt="Button for next picture" width="13" height="18">
+        </div>
 
-    $125.00
-    50%
-    $250.00
+        METTRE UNE DIV POUR LE TEXTE
+        <h3 class="company-name">SNEAKER COMPANY</h3>
+        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-    0
-    Add to cart
-    
+        <div class="prices-div">
+          <div class="current-price">$125.00</div>
+          <div class="discount">50%</div>
+          <div class="normal-price">$250.00</div>
+        </div>
+
+        <div class="quantity-div">
+          <img id="reduce-quantity" src="./images/icon-minus.svg" alt="button to reduce quantity" width="12" height="4">
+          <p class="chosen-quantity">0</p>
+          <img id="increase-quantity" src="./images/icon-plus.svg" alt="button to increase quantity" width="12" height="12">
+        </div>
+
+        <button id="add-cart">
+          <img id="cart-icon" src="./images/icon-cart.svg" alt="Add to cart icon" width="22" height="20">
+          Add to cart
+        </button>
+
+      </section>
+    </main>
+
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Sylvain Web</a>.
     </footer>
+
     <script src="./js/script.js" defer></script>
   </body>
 </html>
