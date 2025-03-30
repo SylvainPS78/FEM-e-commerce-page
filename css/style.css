@@ -5,7 +5,7 @@
 }
 
 :root {
-    --orange: hsl(26, 100%, 55%);
+    --orange: #ff7d1a;
     --pale-orange: hsl(25, 100%, 94%) ;
     --very-dark-blue: hsl(220, 13%, 13%);
     --dark-grayish-blue: hsl(219, 9%, 45%);
@@ -47,7 +47,7 @@ body {
         width: 100%;
         position:fixed;
         top:0;
-        z-index: 20;
+        z-index: 50;
         background-color: var(--white);
     }
 
@@ -62,6 +62,7 @@ body {
         height: 5.5vw;
         width: 5.5vw;
     }
+
 
     #cart-button {
         height: 5.5vw;
@@ -95,12 +96,21 @@ body {
     #previous-button, #next-button {
         position:absolute;
         top:50%;
-        z-index: 10;
+        z-index: 20;
         border-radius: 50%;
         background-color: var(--white);
         padding: 15px; /*  A REVOIR  */ 
         height: 50px;    /*  A REVOIR  */ 
         width:50px;   /*  A REVOIR  */ 
+
+    }
+
+    #previous-button:hover > path, #next-button:hover > path {
+        stroke: var(--orange);
+    }
+
+    #previous-button:hover, #next-button:hover {
+        border: 1px solid var(--orange);
     }
 
     #previous-button {
@@ -197,6 +207,7 @@ body {
         box-shadow: 0px 5px 15px var(--orange);
     }
 
+
     footer {
         margin:var(--layout-gap);
     }
@@ -205,13 +216,13 @@ body {
         position: fixed;
         left: 0;
         top:0;
-        display: none;
+        display: none; /*  FLEX  */
         flex-direction: column;
         width: 70vw;
         height: 100vh;
         color: var(--black);
         background-color: var(--white);
-        z-index: 40;
+        z-index: 60;
         padding: var(--layout-gap);
     }
 
@@ -227,7 +238,7 @@ body {
     }
 
     #customer-cart {
-        display: none;
+        display: none; /*  Sinon NONE  */
         position: absolute;
         padding: var(--layout-gap);
         background-color: var(--white);
@@ -235,7 +246,7 @@ body {
         top: 20vw;
         left:3vw;
         width:94vw;
-        z-index: 20;
+        z-index: 50;
         height: 65vw;
     }
 
@@ -267,7 +278,7 @@ body {
     }
 
     .cart-wrapper {
-        display: none;
+        display: none; /* ou FLEX */
         flex-direction: column;
         gap:var(--layout-gap);
         margin-top: var(--layout-gap);
@@ -298,6 +309,20 @@ body {
         width: 4vw;
     }
 
+    #delete-button:hover,
+    #checkout-button:hover,
+    #open-menu-button:hover,
+    #user-avatar:hover,
+    #add-cart:hover,
+    #previous-button:hover,
+    #next-button:hover,
+    #cart-button:hover,
+    #increase-quantity,
+    #reduce-quantity,
+    #close-menu-button {
+        cursor: pointer;
+    }
+
     #checkout-button {
         all: unset;
         background-color: var(--orange);
@@ -309,6 +334,24 @@ body {
         color: var(--black);
         text-align: center;
     }
+
+    #product-count {
+        position:absolute;
+        top:calc(0.9*var(--layout-gap));
+        right: 16vw;
+        background-color: var(--orange);
+        padding: 2px 2vw;
+        border-radius: 10px;
+        color: var(--white);
+        font-size: calc(0.5*var(--font-size-base));
+    }
+
+    .menu-item:hover {
+        color: var(--orange);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
 }
 
 @media (min-width: 575px) and (max-width: 768px) {
@@ -320,3 +363,5 @@ body {
     }
   }
   
+
+
