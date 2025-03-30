@@ -34,6 +34,19 @@ body {
     height: 100%;
 }
 
+#customer-cart {
+    display: none; /*  Sinon block  */
+    position: absolute;
+    padding: var(--layout-gap);
+    background-color: var(--white);
+    border-radius: 10px;
+    top: 20vw;
+    left:3vw;
+    width:94vw;
+    z-index: 50;
+    height: 65vw;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: var(--orange); }
 
@@ -241,19 +254,6 @@ body {
         margin-bottom: calc(1.5*var(--layout-gap));
     }
 
-    #customer-cart {
-        display: none; /*  Sinon block  */
-        position: absolute;
-        padding: var(--layout-gap);
-        background-color: var(--white);
-        border-radius: 10px;
-        top: 20vw;
-        left:3vw;
-        width:94vw;
-        z-index: 50;
-        height: 65vw;
-    }
-
     #cart-title {
         color: var(--black);
         font-weight: 700;
@@ -377,6 +377,11 @@ body {
     button {
         all:unset;
     }
+
+    .product-thumbnail {
+        display:none;
+    }
+
 }
 
 #increase-quantity:hover > path,
@@ -394,4 +399,61 @@ body {
   }
   
 
+  @media (min-width: 769px) {
 
+    header {
+        display: flex;
+        flex-direction: row;
+        margin: 5vh 10vw;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--dark-grayish-blue);
+        padding-bottom: 5vh;
+    }
+
+    #close-menu-button,
+    #open-menu-button,
+    #next-button,
+    #previous-button {
+        display:none;
+    }
+
+    .nav-menu {
+        position:fixed;
+        top:5vh;
+        left:25vw;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        gap:var(--layout-gap);
+    }
+
+    .right-header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #left-main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 4fr 1fr;
+    }
+
+    .product-picture {
+        height: 400px;
+        width:400px;
+        border-radius: 10px;
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    .product-thumbnail {
+        grid-row: 2;
+    }
+
+  }
+ 
