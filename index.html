@@ -29,14 +29,17 @@
         <p id="cart-title">Cart</p>
         <p id="empty-cart">Your cart is empty.</p>
 
-        <div class="product-in-cart" hidden>
-          <img class="mini-icture" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail picture of product" width="176" width="176">
-          <p class="chosen-product"></p>
-          <p class="cart-price"></p>
-          <img id="delete-button" src="./images/icon-delete.svg" alt="Button to delete cart" width="14" height="16">
+        <div class="cart-wrapper" hidden>
+          <div class="product-in-cart">
+            <img class="mini-picture" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail picture of product" width="176" width="176">
+            <div class="cart-text">
+              <p class="chosen-product">Fall Limited Edition Sneakers</p>
+              <p class="cart-price">$125.00 x 3 <span class="bold">  $375.00</span></p>
+            </div>
+            <img id="delete-button" src="./images/icon-delete.svg" alt="Button to delete cart" width="14" height="16">
+          </div>
           <button id="checkout-button">Checkout</button>
         </div>
-
       </div>
     </header>
 
