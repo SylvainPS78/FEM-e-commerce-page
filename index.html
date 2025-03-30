@@ -21,21 +21,22 @@
         <img id="company-logo" src="./images/logo.svg" alt="Seakers company logo" width="138" height="20">
       </div>
       <div class="rigth-header">
-        <img id="cart-button" src="./images/icon-cart.svg" alt="Button to open cart" width="22" height="20">
-        <div id="product-count">3</div>
+        <button><svg alt="Button to open cart" width="22" height="20" fill="#69707D" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path id="cart-button" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/>
+        </svg></button>
+        <div id="product-count"></div>
         <img id="user-avatar" src="./images/image-avatar.png" alt="avatar of user" width="20" height="20" >
       </dvi>
 
       <div id="customer-cart">
         <p id="cart-title">Cart</p>
         <p id="empty-cart">Your cart is empty.</p>
-
         <div class="cart-wrapper">
           <div class="product-in-cart">
             <img class="mini-picture" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail picture of product" width="176" width="176">
             <div class="cart-text">
               <p class="chosen-product">Fall Limited Edition Sneakers</p>
-              <p class="cart-price">$125.00 x 3 <span class="bold">  $375.00</span></p>
+              <p class="cart-price">$125.00 x <span id="total-quantity">0</span> = <span id="total-price" class="bold">$0.00</span></p>
             </div>
             <img id="delete-button" src="./images/icon-delete.svg" alt="Button to delete cart" width="14" height="16">
           </div>
@@ -94,7 +95,9 @@
         </div>
 
         <button id="add-cart">
-          <img id="cart-icon" src="./images/icon-cart-black.png" alt="Add to cart icon" width="22" height="20">
+          <svg id="cart-icon" alt="Add to cart icon" width="22" height="20" fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
+          </svg>
           Add to cart
         </button>
 

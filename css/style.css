@@ -57,6 +57,11 @@ body {
         width: 4.25vw;
     }
 
+    #close-menu-button {
+        height: 4vw;
+        width: 4.25vw;
+    }
+
     #user-avatar {
         margin-left: var(--layout-gap);
         height: 5.5vw;
@@ -89,7 +94,7 @@ body {
         height: auto;
         object-fit: cover;
         max-height: 80vw;
-        object-position: center;
+        object-position: center 0%;
     }
 
     
@@ -190,7 +195,6 @@ body {
     }
 
     #add-cart {
-        all: unset;
         display: flex;
         background-color: var(--orange);
         flex-direction: row;
@@ -238,7 +242,7 @@ body {
     }
 
     #customer-cart {
-        display: none; /*  Sinon NONE  */
+        display: none; /*  Sinon block  */
         position: absolute;
         padding: var(--layout-gap);
         background-color: var(--white);
@@ -319,7 +323,8 @@ body {
     #cart-button:hover,
     #increase-quantity,
     #reduce-quantity,
-    #close-menu-button {
+    #close-menu-button,
+    #product-count {
         cursor: pointer;
     }
 
@@ -336,6 +341,7 @@ body {
     }
 
     #product-count {
+        display:none;
         position:absolute;
         top:calc(0.9*var(--layout-gap));
         right: 16vw;
@@ -355,6 +361,21 @@ body {
     #add-cart:hover,
     #checkout-button:hover {
         background-color: var(--pale-orange);
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black-lightbox);
+        z-index: 55;
+    }
+
+    button {
+        all:unset;
     }
 }
 
