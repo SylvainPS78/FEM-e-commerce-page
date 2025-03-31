@@ -1,6 +1,7 @@
 const openMenuButton = document.getElementById("open-menu-button");
 const closeMenuButton = document.getElementById("close-menu-button");
 const cartButton = document.getElementById("cart-button");
+const cartSvg = document.getElementById("cart-path");
 const navMenu = document.querySelector("nav");
 const overlay = document.getElementById("overlay");
 const customerCartMenu = document.getElementById("customer-cart");
@@ -38,12 +39,12 @@ function displayCart () {
     if (!cartDiplayed) {
         customerCartMenu.style.display = "block";
         cartDiplayed = true;
-        cartButton.style.fill = "#000000";
+        cartSvg.style.fill = "#000000";
     }
     else {
         customerCartMenu.style.display = "none";
         cartDiplayed = false;
-        cartButton.style.fill="#69707D"
+        cartSvg.style.fill="#69707D"
     }
 }
 
