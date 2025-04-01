@@ -437,6 +437,7 @@ html {
         height: auto;
         width: 12vw;
     }
+
     
     .company-name {
         color:var(--dark-grayish-blue);
@@ -491,10 +492,11 @@ html {
     header {
         display: flex;
         flex-direction: row;
-        margin: 4vh 10vw;
+        align-items: center;
+        margin: 0 3.5vw 5vh 3.5vw;
         justify-content: space-between;
         border-bottom: 1px solid var(--grayish-blue);
-        padding-bottom: 4vh;
+        height:5vh;
     }
 
     html {
@@ -502,16 +504,13 @@ html {
     }
 
     #left-main {
-        width:33vw;
-    }
-
-    main {
-        margin: 5vh 12vw;
+        width:44vw;
+        max-width: 44vw;
     }
 
     .nav-menu {
         position:absolute;
-        top:calc(4vh + 3px);
+        top:1.5vh;
         left:30vw;
         display: flex;
         flex-direction: row;
@@ -528,9 +527,8 @@ html {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 4fr 1fr;
-        gap:min(1.65vw, 2vh);
-        max-width:min(50vh, 33vw);
-        max-height: 50vh;
+        max-width:min(65vh, 44vw);
+        max-height: min(80vh,54vw);
     }
 
     .price-wrapper {
@@ -543,35 +541,36 @@ html {
     }
 
     .product-name {
-        font-size:3.3vw;
+        font-size:min(5vh,3.3vw); /*  TBD  */
+        margin-bottom: 30px;  /*  TBD  */
         color:var(--black);
         line-height: 1;
-        margin-bottom: 30px;
     }
 
     .product-picture {
         border-radius: 15px;
         grid-column: 1/5;
         grid-row: 1;
-        max-height: min(50vh, 33vw);
-        max-width: min(50vh, 33vw);
+        max-height: min(65vh, 44vw);
+        max-width: min(65vh, 44vw);
     }
 
     .product-section {
         display: flex;
         flex-direction: row;
+        margin: 0 4.5vw 5vh 4.5vw;
     }
 
     .product-thumbnail {
         grid-row: 2;
         border-radius: 10px;
-        margin-top: 0.5vw;
-        max-height: min(11vh, 7vw);
-        max-width: min(11vh, 7vw);
+        max-height: min(13vh, 9.5vw); 
+        max-width: min(13vh, 9.5vw);
+        margin-top:2vh; 
     }
 
     .quantity-wrapper {
-        padding:20px;
+        padding:20px;  /*  TBD  */
         width:35%;
     }
 
@@ -584,9 +583,11 @@ html {
     #right-main {
         display: flex;
         flex-direction: column;
-        margin-left:10vw;
-        margin-top:4vw;
-        width:33vw;
+        justify-content: center;
+        margin-left:3vw;
+        width:44vw;
+        max-width: 44vw;
+        max-height: 91vh;
     }
 
     #thumbnail-1 {
@@ -609,3 +610,63 @@ html {
     }
   }
  
+
+  @media (min-width: 1001px) {
+
+    #company-logo {
+        width: 17.5vw;
+    }
+
+    header {
+        margin: 0 12vw 10vh 12vw;
+        height:11vh;
+    }
+
+    #left-main {
+        width:30vw;
+        max-width: 30vw;
+    }
+    
+    .nav-menu {
+        top:4.25vh;
+        left:35vw;
+        gap:2vw;
+        font-size: 1.5vw;
+    }
+
+    .picture-wrapper {
+        max-width:min(50vh, 30vw);
+        max-height: min(64vh,39vw);
+    }
+
+    .product-name {
+        margin-bottom: 30px;
+        font-size:min(5vh,3.3vw);
+    }
+
+    .product-picture {
+        max-height: min(50vh, 30vw);
+        max-width: min(50vh, 30vw);
+    }
+
+    .product-section {
+        margin: 0 15vw 15vh 15vw;
+    }
+
+    .product-thumbnail {
+        max-height: min(10vh, 7vw);
+        max-width: min(10vh, 7vw);
+        margin-top:4vh;
+    }
+
+    .quantity-wrapper {
+        padding:20px;
+    }
+
+    #right-main {
+        margin-left:10vw;
+        width:30vw;
+        max-width: 30vw;
+        max-height: 64vh;
+    }
+  }
