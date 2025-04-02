@@ -15,7 +15,7 @@
     --black : #000000;
     --black-lightbox: rgba(0, 0, 0, 0.75);
     --font-size-base : clamp(0.9rem, 4.3vw, 1.4rem);
-    --layout-gap:5.5vw; /* TBD */
+    --layout-gap:5.5vw;
 }
 
 #add-cart {
@@ -40,11 +40,7 @@ body {
     height: 100%;
 }
 
-.bold {
-    font-weight: 700;
-    color: var(--black);
-}
-
+.bold,
 .current-price {
     font-weight: 700;
     color: var(--black);
@@ -56,7 +52,7 @@ html {
     color: var(--dark-grayish-blue);
     height: 100vh;
     width: 100vw;
-    font-family: "Kumbh Sans";
+    font-family: "Kumbh Sans", sans-serif;
     font-weight: 400;
 }
 
@@ -101,8 +97,13 @@ html {
     cursor: pointer;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: var(--orange); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: var(--orange);
+}
 
 @media (max-width : 768px) {
 
@@ -144,7 +145,7 @@ html {
     }
 
     .cart-wrapper {
-        display: none; /* ou FLEX */
+        display: none;
         flex-direction: column;
         gap:var(--layout-gap);
         margin-top: var(--layout-gap);
@@ -188,7 +189,7 @@ html {
     }
 
     #customer-cart {
-        display: none; /*  Sinon block  */
+        display: none;
         position: absolute;
         padding: var(--layout-gap);
         background-color: var(--white);
@@ -245,7 +246,7 @@ html {
     }
 
     main {
-        margin-top: 52px;  /*  A REVOIR  */ 
+        margin-top: 52px; 
         width: 100%;
     }
 
@@ -269,7 +270,7 @@ html {
         position: fixed;
         left: 0;
         top:0;
-        display: none; /*  FLEX  */
+        display: none; 
         flex-direction: column;
         width: 70vw;
         height: 100vh;
@@ -321,16 +322,18 @@ html {
         z-index: 20;
         border-radius: 50%;
         background-color: var(--white);
-        padding: 15px; /*  A REVOIR  */ 
-        height: 50px;    /*  A REVOIR  */ 
-        width:50px;   /*  A REVOIR  */ 
+        padding: 15px;
+        height: 50px; 
+        width:50px;  
     }
 
-    #previous-button:hover, #next-button:hover {
+    #previous-button:hover, 
+    #next-button:hover {
         border: 1px solid var(--orange);
     }
 
-    #previous-button:hover > path, #next-button:hover > path {
+    #previous-button:hover > path, 
+    #next-button:hover > path {
         stroke: var(--orange);
     }
 
@@ -450,7 +453,7 @@ html {
     }
 
     .cart-wrapper {
-        display: none; /* ou FLEX */
+        display: none;
         flex-direction: column;
         gap:clamp(5px,1.5vh,35px);
         margin-top:clamp(5px,1.5vh,35px);;
@@ -492,7 +495,7 @@ html {
     }
 
     #customer-cart {
-        display: none; /*  Sinon block  */
+        display: none;
         position: absolute;
         padding: 20px;
         background-color: var(--white);
@@ -630,9 +633,9 @@ html {
         z-index: 20;
         border-radius: 50%;
         background-color: var(--white);
-        padding: 15px; /*  A REVOIR  */ 
-        height: 50px;    /*  A REVOIR  */ 
-        width:50px;   /*  A REVOIR  */ 
+        padding: 15px;
+        height: 50px;
+        width:50px;
     }
 
     #overlay-previous-button:hover, #overlay-next-button:hover {
@@ -750,7 +753,7 @@ html {
     }
 
     .quantity-wrapper {
-        padding:20px;  /*  TBD  */
+        padding:20px; 
         width:35%;
     }
 
