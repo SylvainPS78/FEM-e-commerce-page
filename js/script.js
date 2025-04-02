@@ -102,7 +102,7 @@ function overlayNextImage () {
     overlayMainPicture.src = `./images/image-product-${imageNumber}.jpg`;
 }
 
-function overlayPrevioustImage () {
+function overlayPreviousImage () {
     imageNumber--;
     if (imageNumber < 1) {imageNumber = 4}
     overlayMainPicture.src = `./images/image-product-${imageNumber}.jpg`;
