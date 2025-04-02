@@ -91,6 +91,8 @@ html {
 #add-cart:hover,
 #previous-button:hover,
 #next-button:hover,
+#overlay-previous-button:hover,
+#overlay-next-button:hover,
 #cart-button:hover,
 #increase-quantity,
 #reduce-quantity,
@@ -477,7 +479,6 @@ html {
         height: auto;
         width: 12vw;
     }
-
     
     .company-name {
         color:var(--dark-grayish-blue);
@@ -506,7 +507,10 @@ html {
 
     #desktop-overlay {
         display: none;
+        flex-direction: column;
         position: fixed;
+        justify-content: center;
+        align-items: center;
         top:0;
         left:0;
         width: 100vw;
@@ -587,6 +591,92 @@ html {
 
     .normal-price {
         font-size: clamp(12px, 1.1vw, 18px);
+    }
+
+    #overlay-close-button {
+        margin-bottom:2vh;
+        margin-left:min(54vh,36vw);
+    }
+
+    #overlay-close-button:hover > path{
+        fill:var(--orange);
+    }
+
+    #overlay-main-picture {
+        max-width: min(60vh, 40vw);
+        max-height: min(60vh, 40vw);
+        border-radius: 15px;
+    }
+
+    #overlay-main-picture-wrapper {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #overlay-next-button {
+        position:relative;
+        right:25%;
+    }
+
+    #overlay-previous-button {
+        position:relative;
+        left:25%;
+    }
+
+    #overlay-previous-button, #overlay-next-button {
+        position:absolute;
+        top:50%;
+        z-index: 20;
+        border-radius: 50%;
+        background-color: var(--white);
+        padding: 15px; /*  A REVOIR  */ 
+        height: 50px;    /*  A REVOIR  */ 
+        width:50px;   /*  A REVOIR  */ 
+    }
+
+    #overlay-previous-button:hover, #overlay-next-button:hover {
+        border: 1px solid var(--orange);
+    }
+
+    #overlay-previous-button:hover > path, #overlay-next-button:hover > path {
+        stroke: var(--orange);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .overlay-thumbnail {
+        overflow: hidden;
+        max-width: min(13vh, 9vw);
+        max-height: min(13vh, 9vw);
+        border-radius: 10px;
+    }
+
+    .overlay-thumbnail:hover {
+        cursor: pointer;
+    }
+
+    #overlay-thumb-wrapper {
+        display: none;
+        position: relative;
+        gap:min(1.2vw,2.5vh);
+        max-width: min(60vh, 40vw);
+        margin-top:3vh;
     }
 
     .picture-wrapper {
