@@ -3,7 +3,7 @@ const closeMenuButton = document.getElementById("close-menu-button");
 const cartButton = document.getElementById("cart-button");
 const cartSvg = document.getElementById("cart-path");
 const navMenu = document.querySelector("nav");
-const overlay = document.getElementById("overlay");
+const mobileOverlay = document.getElementById("mobile-overlay");
 const customerCartMenu = document.getElementById("customer-cart");
 const productCount = document.getElementById("product-count");
 const reduceQuantityButton = document.getElementById("reduce-quantity");
@@ -27,12 +27,12 @@ let imageNumber = 1;
 
 function displayNavMenu () {
     navMenu.style.display = "flex";
-    overlay.style.display = "block";
+    mobileOverlay.style.display = "block";
 }
 
 function closeNavMenu () {
     navMenu.style.display = "none";
-    overlay.style.display = "none";
+    mobileOverlay.style.display = "none";
 }
 
 function displayCart () {
