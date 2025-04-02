@@ -644,11 +644,28 @@ html {
     }
 
     .overlay-thumbnail {
+        position:relative;
         overflow: hidden;
         max-width: min(13vh, 9vw);
         max-height: min(13vh, 9vw);
         border-radius: 10px;
     }
+
+    .overlay-thumbnail::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        transition: background-color 0.3s ease;
+        z-index: 900;
+      }
+
+    .overlay-thumbnail:hover::after {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
 
     .overlay-thumbnail:hover {
         cursor: pointer;
